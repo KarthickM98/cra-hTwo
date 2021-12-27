@@ -3,9 +3,9 @@ import React,{useState} from 'react'
 
 const Form =()=> {
     const [user,setUser]=useState({
-        name:"",
-        dept:"",
-        rate:""
+        // name:"",
+        // dept:"",
+        // rate:""
     })
     const [rec,setRec]=useState([]);
     const onInput=(event)=>{
@@ -19,6 +19,11 @@ const Form =()=> {
         event.preventDefault();
         setRec([...rec,user])
         console.log(rec);
+        setUser({
+            name:'',
+            dept:'',
+            rate:''
+        })
     }
         return (
             <div className='forms'>
